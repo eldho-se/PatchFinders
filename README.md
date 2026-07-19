@@ -1,6 +1,6 @@
 # PatchFinders: Road Surface Anomaly Detection using DINOv2
 
-PatchFinders is a deep learning framework for detecting road surface anomalies such as *cracks* and *potholes* using a frozen *DINOv2 Vision Transformer* backbone with lightweight detection heads. The project focuses on improving robustness under varying camera perspectives and environmental conditions through perspective-aware data augmentation.
+This work done using a deep learning framework for detecting road surface anomalies such as *cracks* and *potholes* using a frozen *DINOv2 Vision Transformer* backbone with lightweight detection heads. The project focuses on improving robustness under varying camera perspectives and environmental conditions through perspective-aware data augmentation.
 
 ---
 
@@ -19,7 +19,9 @@ PatchFinders is a deep learning framework for detecting road surface anomalies s
 
 ## Project Structure
 
-text
+## Project Structure
+
+```text
 PatchFinders/
 │
 ├── data/
@@ -44,14 +46,12 @@ PatchFinders/
 │   └── metrics.py
 │
 ├── experiments/
-│
 ├── comparison_models/
-│
 ├── main.py
 ├── main_notebook.ipynb
 ├── environment.yml
 └── README.md
-
+```
 
 ---
 
@@ -112,39 +112,37 @@ Example augmentation outputs are available inside the samples/ directory.
 
 Clone the repository:
 
-bash
+```bash
 git clone https://github.com/yourusername/PatchFinders.git
-
 cd PatchFinders
-
+```
 
 Create the conda environment:
 
-bash
+```bash
 conda env create -f environment.yml
-
+```
 
 Activate it:
 
-bash
+```bash
 conda activate patch_finder
-
-
+```
 ---
 
 ## Running the Project
 
-Run the complete workflow:
+un the complete workflow:
 
-bash
+```bash
 python main.py
+```
 
+Or execute the notebook:
 
-or execute the notebook:
-
-bash
+```bash
 jupyter notebook main_notebook.ipynb
-
+```
 
 ---
 
