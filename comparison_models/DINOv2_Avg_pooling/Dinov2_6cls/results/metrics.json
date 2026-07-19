@@ -1,0 +1,42 @@
+{
+  "model_name": "facebook/dinov2-small",
+  "num_classes": 6,
+  "classes": {
+    "0": "pothole",
+    "1": "longitudinal_crack",
+    "2": "transverse_crack",
+    "3": "alligator_crack",
+    "4": "rutting",
+    "5": "surface_deterioration"
+  },
+  "presence_auroc_eval": {
+    "dataset": "data/processed/val/images",
+    "overall_auroc": 0.6819,
+    "per_class_auroc": {
+      "pothole": 0.6198,
+      "longitudinal_crack": 0.8001,
+      "transverse_crack": 0.6257,
+      "alligator_crack": 0.6875,
+      "rutting": null,
+      "surface_deterioration": 0.6762
+    }
+  },
+  "training_config": {
+    "backbone": "facebook/dinov2-small",
+    "freeze_backbone": true,
+    "num_queries": 100,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "scheduler": "CosineAnnealingLR (T_max=30)",
+    "epochs": 30,
+    "batch_size": 4,
+    "grad_clip_norm": 0.1,
+    "loss_function": "Multi-Task Detection Loss (CrossEntropyLoss + 5.0 * L1 Box Loss)"
+  },
+  "saved_artifacts": {
+    "best_checkpoint": "summry/results/weights_info/best.pt",
+    "last_checkpoint": "summry/results/weights_info/last.pt",
+    "predictions_directory": "summry/results/predictions/"
+  }
+}
