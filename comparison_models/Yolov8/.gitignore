@@ -1,0 +1,22 @@
+# Datasets and outputs
+data/raw/
+data/processed/
+data/augmented/
+runs/
+outputs/
+
+# Models and weights
+*.pt
+*.onnx
+weights/*.pt
+
+# Environment and config
+.env
+venv/
+
+# Python cache & build outputs
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+patchfinders.egg-info/
+.DS_Store
