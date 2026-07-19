@@ -1,0 +1,12 @@
+names:
+- pothole
+- longitudinal_crack
+- transverse_crack
+- alligator_crack
+- rutting
+- surface_deterioration
+nc: 6
+path: data/processed
+test: val/images
+train: train/images
+val: val/images

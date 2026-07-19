@@ -1,0 +1,13 @@
+weights: yolov8m.pt
+data: configs/dataset.yaml
+epochs: 100
+imgsz: 640
+batch: 16
+device: 0
+name: yolov8m_baseline
+
+# Augmentation
+degrees: 15.0
+perspective: 0.001
+mosaic: 1.0
+mixup: 0.1
